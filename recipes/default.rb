@@ -18,3 +18,16 @@
 # limitations under the License.
 #
 
+base_packages = [
+  'fish',
+  'wget',
+  'git',
+  'vim',
+  'tmux',
+  'lynx',
+  'jq',
+  'htop'
+]
+
+package base_packages
+
