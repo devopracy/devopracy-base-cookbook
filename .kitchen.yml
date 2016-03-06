@@ -23,7 +23,7 @@ suites:
 
   - name: fed-ec2
     run_list: 
-      - recipe[devopracy-base::fedora]
+      - recipe[devopracy-base::default]
       - recipe[devopracy-base::foss_sec]
     driver:
       name: ec2
@@ -35,7 +35,7 @@ suites:
       security_group_ids: [ <%= ENV['SECURITY_GROUP_ID'] %> ]
       image_id: <%= ENV['AMI_ID'] %>
       tags: 
-        Name: test-devopracy-base
+        Name: kitchen-devopracy-base
     transport:
       ssh_key: <%= ENV['SSH_PRIVATE_KEY_FILE'] %> 
       username: fedora
