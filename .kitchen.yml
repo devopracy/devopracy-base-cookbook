@@ -1,0 +1,41 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  socket: unix:///var/run/docker.sock
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: fedora
+ 
+suites:
+  - name: default
+    run_list:
+      - recipe[devopracy-base::default]
+    attributes:
+
+  - name: fed-docker
+    run_list:
+     - recipe[devopracy-base::fedora]
+    attributes:
+
+  - name: fed-ec2
+    run_list: 
+      - recipe[devopracy-base::fedora]
+      - recipe[devopracy-base::foss_sec]
+    driver:
+      name: ec2
+      region: <%= ENV['AWS_REGION'] %>
+      aws_ssh_key_id: bootstrap
+      instance_type: t2.small 
+      availability_zone: a
+      subnet_id: <%= ENV['SUBNET_ID'] %>
+      security_group_ids: [ <%= ENV['SECURITY_GROUP_ID'] %> ]
+      image_id: <%= ENV['AMI_ID'] %>
+      tags: 
+        Name: test-devopracy-base
+    transport:
+      ssh_key: <%= ENV['SSH_PRIVATE_KEY_FILE'] %> 
+      username: fedora
