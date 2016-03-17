@@ -8,3 +8,9 @@ license          'apache2'
 description      'Installs/Configures devopracy-base'
 long_description 'Installs/Configures devopracy-base'
 version          '0.0.1'
+
+supports 'fedora'
+
+depends 'samhain'
+depends 'chkrootkit'
+

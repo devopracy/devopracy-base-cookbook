@@ -1,12 +1,25 @@
 # Encoding: UTF-8
 
-require_relative '../spec_helper'
+require_relative '../spec_helper.rb'
 
 describe 'devopracy-base::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
+  base_packages = [
+    'fish',
+    'wget',
+    'git',
+    'vim',
+    'tmux',
+    'lynx',
+    'jq',
+    'htop'
+  ]
 
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  base_packages.each do |p|
+    describe package(p) do
+      it 'is installed' do 
+        expect(subject).to be_installed
+      end 
+    end
   end
+
 end
