@@ -2,7 +2,6 @@ Devopracy Base Cookbook
 =======================
 [![Cookbook Version](https://img.shields.io/cookbook/v/devopracy-base.svg)][cookbook]
 [![Build Status](https://img.shields.io/travis/munjeli/devopracy-base-chef.svg)][travis]
-[![Code Climate](https://img.shields.io/codeclimate/github/munjeli/devopracy-base-chef.svg)][codeclimate]
 [![Coverage Status](https://img.shields.io/coveralls/munjeli/devopracy-base-chef.svg)][coveralls]
 
 [cookbook]: https://supermarket.chef.io/cookbooks/devopracy-base
