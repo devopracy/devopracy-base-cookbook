@@ -7,7 +7,6 @@ Devopracy Base Cookbook
 
 [cookbook]: https://supermarket.chef.io/cookbooks/devopracy-base
 [travis]: https://travis-ci.org/munjeli/devopracy-base-chef
-[codeclimate]: https://codeclimate.com/github/munjeli/devopracy-base-chef
 [coveralls]: https://coveralls.io/r/munjeli/devopracy-base-chef
 
 TODO: Enter the cookbook description here.
